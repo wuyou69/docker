@@ -67,7 +67,7 @@ RUN mkdir -p /etc/nginx/modsec/plugins \
     && rm -f v${CORERULESET_VERSION}.tar.gz \
     && wget -P /etc/nginx/modsec/plugins https://raw.githubusercontent.com/coreruleset/wordpress-rule-exclusions-plugin/master/plugins/wordpress-rule-exclusions-before.conf \
     && wget -P /etc/nginx/modsec/plugins https://raw.githubusercontent.com/coreruleset/wordpress-rule-exclusions-plugin/master/plugins/wordpress-rule-exclusions-config.conf \
-    && wget -P /etc/nginx/modsec/plugins https://raw.githubusercontent.com/kejilion/nginx/main/waf/ldnmp-before.conf \
+    && wget -P /etc/nginx/modsec/plugins https://raw.githubusercontent.com/wuyou69/nginx/main/waf/ldnmp-before.conf \
     && cp /etc/nginx/modsec/crs-setup.conf.example /etc/nginx/modsec/crs-setup.conf \
     && sed -i '/id:900110/,/setvar:tx.outbound_anomaly_score_threshold/s/^#//' /etc/nginx/modsec/crs-setup.conf \
     && sed -i -e '$!N;s/^#\(SecAction.*\n.*id:900110\)/\1/;P;D' /etc/nginx/modsec/crs-setup.conf \

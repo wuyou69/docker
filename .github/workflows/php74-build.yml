@@ -26,5 +26,5 @@ jobs:
           context: .
           file: php-fpm/Dockerfile-PHP74
           push: true
-          tags: kjlion/php:7.4-fpm-alpine
+          tags: wuyou69/php:7.4-fpm-alpine
           platforms: linux/amd64,linux/arm64

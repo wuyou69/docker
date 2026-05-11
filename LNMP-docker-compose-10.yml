@@ -22,7 +22,7 @@ services:
       - /var/cache/nginx:rw,noexec,nosuid,size=2048m
 
   php:
-    image: kjlion/php:fpm-alpine
+    image: wuyou69/php:fpm-alpine
     container_name: php
     restart: always
     volumes:
@@ -34,7 +34,7 @@ services:
 
 
   php74:
-    image: kjlion/php:7.4-fpm-alpine
+    image: wuyou69/php:7.4-fpm-alpine
     container_name: php74
     restart: always
     volumes:
@@ -53,8 +53,8 @@ services:
       - ./mysql:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: webroot
-      MYSQL_USER: kejilion
-      MYSQL_PASSWORD: kejilionYYDS
+      MYSQL_USER: wuyoulab
+      MYSQL_PASSWORD: WuYouLabYYDS
     healthcheck:
       test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-pwebroot"]
       interval: 30s

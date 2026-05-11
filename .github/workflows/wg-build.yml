@@ -29,5 +29,5 @@ jobs:
           context: ./wireguard
           file: ./wireguard/Dockerfile
           push: true
-          tags: kjlion/wireguard:alpine
+          tags: wuyou69/wireguard:alpine
           platforms: linux/amd64,linux/arm64

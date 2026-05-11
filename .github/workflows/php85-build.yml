@@ -26,5 +26,5 @@ jobs:
           context: .
           file: php-fpm/Dockerfile-PHP85
           push: true
-          tags: kjlion/php:8.5-fpm-alpine
+          tags: wuyou69/php:8.5-fpm-alpine
           platforms: linux/amd64,linux/arm64

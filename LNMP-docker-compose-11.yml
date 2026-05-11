@@ -1,7 +1,7 @@
 
 services:
   nginx:
-    image: kjlion/nginx:alpine
+    image: wuyou69/nginx:alpine
     container_name: nginx
     restart: always
     ports:
@@ -22,7 +22,7 @@ services:
         condition: on-failure
 
   php:
-    image: kjlion/php:fpm-alpine
+    image: wuyou69/php:fpm-alpine
     container_name: php
     restart: always
     volumes:
@@ -31,7 +31,7 @@ services:
       replicas: 2  # 设置 PHP 的副本数量
 
   php74:
-    image: kjlion/php:7.4-fpm-alpine
+    image: wuyou69/php:7.4-fpm-alpine
     container_name: php74
     restart: always
     volumes:
@@ -47,8 +47,8 @@ services:
       - /home/web/mysql:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: webroot
-      MYSQL_USER: kejilion
-      MYSQL_PASSWORD: kejilionYYDS
+      MYSQL_USER: wuyoulab
+      MYSQL_PASSWORD: WuYouLabYYDS
     deploy:
       placement:
         constraints:
