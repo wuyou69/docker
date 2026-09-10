@@ -106,7 +106,7 @@ set -e
 
 # Git commit from https://github.com/docker/docker-install when
 # the script was uploaded (Should only be modified by upload job):
-SCRIPT_COMMIT_SHA="4e16be805b3af595aa448d1a4def857841f1c62c"
+SCRIPT_COMMIT_SHA="2b32480025b223ebfddae9a3a8bef09027680f53"
 
 # strip "v" prefix if present
 VERSION="${VERSION#v}"
@@ -565,7 +565,7 @@ do_install() {
 		centos.8|centos.7|rhel.7)
 			deprecation_notice "$lsb_dist" "$dist_version"
 			;;
-		debian.buster|debian.stretch|debian.jessie)
+		debian.bullseye|debian.buster|debian.stretch|debian.jessie)
 			deprecation_notice "$lsb_dist" "$dist_version"
 			;;
 		raspbian.buster|raspbian.stretch|raspbian.jessie)
